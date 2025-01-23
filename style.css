@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: "Roboto", serif;
     list-style-type: none;
 }
 
 :root{
     --white : #ffffff;
     --black : #000000;
+    --red : #ff0000;
+    --pink : #ff00e1;
+    --green : #02c402;
+    --blue : #0000ff;
+    --yellow: #ffc400;
 }
 
 /* Heaer start */
@@ -33,4 +38,44 @@ img.user-info-img {
     padding: 8px;
     background-color: white;
     box-shadow: -3px 6px 10px 2px #f0f0f0;
+}
+
+/* Border-item */
+#border-item {
+    border-left: 4px solid var(--red);
+    height: 56px;
+    padding: 10px;
+}
+
+.line-height{
+    line-height: 0;
+}
+
+/* table start */
+
+.user-name p {
+    font-size: 13px;
+    font-weight: 400;
+}
+table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border: 2px solid #dbdada;
+}
+
+tr.data-table {
+    background-color: #d8d8d8;
+    color: #000000;
+}
+
+  
+@media screen and (min-device-width: 340px) and (max-device-width: 576px) {
+    #border-item {
+        border-left: 4px solid var(--red);
+        height: 61px;
+        padding: 10px;
+        margin: 10px;
+    }
+    
 }

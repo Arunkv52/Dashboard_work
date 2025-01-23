@@ -1,175 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
-    <!-- Link css -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Bootstrap css cdn -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <!-- Font awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="head-all">
-        <div
-          class="head-all-1 bg-primary d-flex align-items-end justify-content-between p-2 flex-wrap"
-        >
-          <div class="item-1 d-flex flex-wrap ">
-            <div class="menu-icon">
-              <i class="fa-solid fa-bars"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <!-- Link css -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap css cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="head-all">
+      <div class="head-all-1 bg-primary d-flex align-items-end justify-content-between p-2 flex-wrap">
+        <div class="item-1 d-flex flex-wrap">
+          <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="head-list">
+            <ul class="d-flex justify-content-start fw-light gap-3 text-light">
+              <li>
+                <a href="#" class="text-decoration-none text-light">Dashboard</a>
+              </li>
+              <li>
+                <a href="customers.html" class="text-decoration-none text-light">Customers</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+
+        <div class="item-2 d-flex flex-wrap">
+          <div class="user-item d-flex justify-content-end align-items-end gap-2">
+            <div class="bell-icon">
+              <button type="button" class="btn btn-primary position-relative">
+                <i class="fa-solid fa-bell"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  2
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
             </div>
-            <div class="head-list">
-              <ul
-                class="d-flex justify-content-start fw-light gap-3 text-light"
-              >
+            <div class="dash-icon">
+              <button type="button" class="btn btn-primary position-relative">
+                <i class="fa-brands fa-mendeley"></i>
+              </button>
+            </div>
+            <div class="mail-icon">
+              <button type="button" class="btn btn-primary position-relative">
+                <i class="fa-regular fa-envelope"></i>
+              </button>
+            </div>
+          </div>
+          <div class="user-info">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="User-img.jpg" alt="" class="user-info-img" />
+              </button>
+              <ul class="dropdown-menu">
                 <li>
-                  <a href="#" class="text-decoration-none text-light"
-                    >Dashboard</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none text-light"
-                    >Customers</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-decoration-none text-light"
-                    >Products</a
-                  >
+                  <button class="dropdown-item" type="button">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                  </button>
                 </li>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-          <div class="item-2 d-flex flex-wrap">
-            <div
-              class="user-item d-flex justify-content-end align-items-end gap-2"
-            >
-              <div class="bell-icon">
-                <button type="button" class="btn btn-primary position-relative">
-                  <i class="fa-solid fa-bell"></i>
-                  <span
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  >
-                    2
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                </button>
+  <!-- Main location start -->
+  <section>
+    <!-- breadcrumb start -->
+    <div class="bread-crumb">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Dashboard
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <!-- Breadcrumb end -->
+
+    <!-- Main content start -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card bg-success text-light">
+            <div class="card-item d-flex justify-content-around flex-wrap">
+              <div class="card-body">
+                <h4 class="card-title">
+                  26K
+                  <sub class="fw-light">(-12.4% <i class="fa-solid fa-arrow-down"></i> )
+                  </sub>
+                </h4>
+                <p class="card-text fw-light">Users</p>
               </div>
-              <div class="dash-icon">
-                <button type="button" class="btn btn-primary position-relative">
-                  <i class="fa-brands fa-mendeley"></i>
-                </button>
-              </div>
-              <div class="mail-icon">
-                <button type="button" class="btn btn-primary position-relative">
-                  <i class="fa-regular fa-envelope"></i>
-                </button>
+              <div class="card-body-drop-down">
+                <div class="dropdown">
+                  <button class="btn text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="user-info">
-              <div class="dropdown">
-                <button
-                  class="btn dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img src="User-img.jpg" alt="" class="user-info-img" />
-                </button>
-                <ul class="dropdown-menu">
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Account
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Messages
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Tasks
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Updates
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Comments
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Payment
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Projects
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Lock Account
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      <i class="fa-regular fa-envelope"></i> Logout
-                    </button>
-                  </li>
-                </ul>
+            <!-- Line area -->
+            <div>
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card bg-primary text-light">
+            <div class="card-item d-flex justify-content-around flex-wrap">
+              <div class="card-body">
+                <h4 class="card-title">
+                  26K
+                  <sub class="fw-light">(-12.4% <i class="fa-solid fa-arrow-down"></i> )
+                  </sub>
+                </h4>
+                <p class="card-text fw-light">Users</p>
+              </div>
+              <div class="card-body-drop-down">
+                <div class="dropdown">
+                  <button class="btn text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Line area -->
+            <div>
+              <canvas id="myChart-1"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card bg-info text-light">
+            <div class="card-item d-flex justify-content-around flex-wrap">
+              <div class="card-body">
+                <h4 class="card-title">
+                  26K
+                  <sub class="fw-light">(-12.4% <i class="fa-solid fa-arrow-down"></i> )
+                  </sub>
+                </h4>
+                <p class="card-text fw-light">Users</p>
+              </div>
+              <div class="card-body-drop-down">
+                <div class="dropdown">
+                  <button class="btn text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Line area -->
+            <div>
+              <canvas id="myChart-2"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card bg-dark text-light">
+            <div class="card-item d-flex justify-content-around flex-wrap">
+              <div class="card-body">
+                <h4 class="card-title">
+                  26K
+                  <sub class="fw-light">(-12.4% <i class="fa-solid fa-arrow-down"></i> )
+                  </sub>
+                </h4>
+                <p class="card-text fw-light">Users</p>
+              </div>
+              <div class="card-body-drop-down">
+                <div class="dropdown">
+                  <button class="btn text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Line area -->
+            <div>
+              <canvas id="myChart-3"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-dis-flex d-flex justify-content-between align-items-center p-3">
+              <div class="card-top">
+                <h5>Traffic</h5>
+              </div>
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" />
+                <label class="btn btn-outline-primary" for="btnradio1">Day</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked />
+                <label class="btn btn-outline-primary" for="btnradio2">Month</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
+                <label class="btn btn-outline-primary" for="btnradio3">Year</label>
+              </div>
+              <button type="button" class="btn btn-primary">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+              </button>
+            </div>
+            <div class="card-body">
+              <!-- Line area -->
+              <div>
+                <canvas id="Barchart"></canvas>
+              </div>
+            </div>
+            <div class="card-body">
+              <hr />
+              <div class="card-body-all-item d-flex justify-content-between flex-wrap text-center">
+                <div class="card-body-all p-2">
+                  <h5 class="card-title">Visits</h5>
+                  <p class="card-text fw-lighter">29.703 Users (40%)</p>
+                  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                    <div class="progress-bar bg-primary" style="width: 40%"></div>
+                  </div>
+                </div>
+                <div class="card-body-all p-2">
+                  <h5 class="card-title">Unique</h5>
+                  <p class="card-text fw-lighter">24.093 Users (20%)</p>
+                  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                    <div class="progress-bar bg-warning" style="width: 25%"></div>
+                  </div>
+                </div>
+                <div class="card-body-all p-2">
+                  <h5 class="card-title">Pageviews</h5>
+                  <p class="card-text fw-lighter">78.706 Views (60%)</p>
+                  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                    <div class="progress-bar bg-info" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div class="card-body-all p-2">
+                  <h5 class="card-title">New Users</h5>
+                  <p class="card-text fw-lighter">22.123 Users (80%)</p>
+                  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                    <div class="progress-bar bg-danger" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div class="card-body-all p-2">
+                  <h5 class="card-title">Bounce Rate</h5>
+                  <p class="card-text fw-lighter">40.15%</p>
+                  <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                    <div class="progress-bar bg-dark" style="width: 40%"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
-
-    <section>
-        <!-- breadcrumb start -->
-        <div class="bread-crumb">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                </ol>
-              </nav>
-         </div>
-        <div class="container-fluid">
-            <div class="row">
-
+      <!-- image card start -->
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="card text-left">
+            <div class="card-header">Traffic Sales</div>
+            <div class="card-body">
+              <div class="card-item-4 d-flex justify-content-between mt-3 mb-3 flex-wrap">
+                <div class="card-item-one" id="border-item">
+                  <p class="line-height">New Clients</p>
+                  <h3 class="fw-bold">9.123</h3>
+                </div>
+                <div class="card-item-one" id="border-item">
+                  <p class="line-height">Recuring Clients</p>
+                  <h3 class="fw-bold">22.643</h3>
+                </div>
+                <div class="card-item-one" id="border-item">
+                  <p class="line-height">Pageviews</p>
+                  <h3 class="fw-bold">78.123</h3>
+                </div>
+                <div class="card-item-one" id="border-item">
+                  <p class="line-height">Organic</p>
+                  <h3 class="fw-bold">49.123</h3>
+                </div>
+              </div>
             </div>
+            <div class="card-footer text-body-secondary">
+              <div class="row flex-wrap">
+                <div class="col-md-6">
+                  <div class="date-item mb-3">
+                    <p class="text-muted">Monday</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-success" style="width: 25%"></div>
+                    </div>
+                  </div>
+                  <div class="date-item mb-3">
+                    <p class="text-muted">Tuesday</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-primary" style="width: 75%"></div>
+                    </div>
+                  </div>
+                  <div class="date-item mb-3">
+                    <p class="text-muted">Wednesday</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-secondary" style="width: 10%"></div>
+                    </div>
+                  </div>
+                  <div class="date-item mb-3">
+                    <p class="text-muted">Thursday</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-danger" style="width: 95%"></div>
+                    </div>
+                  </div>
+                  <div class="date-item mb-3">
+                    <p class="text-muted">Friday</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-warning" style="width: 80%"></div>
+                    </div>
+                  </div>
+                  <div class="date-item mb-3">
+                    <p class="text-muted">Saturday</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-info" style="width: 40%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="revenue">
+                    <div class="revenue-item d-flex justify-content-start align-items-baseline gap-3">
+                      <i class="fa-solid fa-chart-simple"></i>
+                      <p>Revenue</p>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                      <div class="progress-bar bg-success" style="width: 70%"></div>
+                    </div>
+                    <div class="Lost mt-4 mb-3">
+                      <div class="revenue-item d-flex justify-content-start align-items-baseline gap-3">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <p>Lost</p>
+                      </div>
+                      <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                        <div class="progress-bar bg-danger" style="width: 20%"></div>
+                      </div>
+                      <!-- Search deatils -->
+                      <div class="mt-5">
+                        <div class="Lost mt-4">
+                          <div class="revenue-item d-flex justify-content-start align-items-baseline gap-3">
+                            <i class="fa-brands fa-google"></i>
+                            <p>Google Search</p>
+                          </div>
+                          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                            <div class="progress-bar bg-primary" style="width: 80%"></div>
+                          </div>
+                          <div class="Lost mt-4">
+                            <div class="revenue-item d-flex justify-content-start align-items-baseline gap-3">
+                              <i class="fa-solid fa-money-bill-wave"></i>
+                              <p>Paid Ads</p>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                              aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                              <div class="progress-bar bg-dark" style="width: 60%"></div>
+                            </div>
+                            <div class="Lost mt-4">
+                              <div class="revenue-item d-flex justify-content-start align-items-baseline gap-3">
+                                <i class="fa-solid fa-percent"></i>
+                                <p>Promotions</p>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100" style="height: 3px">
+                                <div class="progress-bar bg-success" style="width: 40%"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <!-- Table section start -->
+      <div class="row mt-4">
+        <div class="col-md-12 col-sm-12">
+          <div class="card">
+            <div class="card-header">Table Data</div>
+            <div class="card-body">
+              <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"><i class="fa-solid fa-user"></i></th>
+                    <th scope="col">User</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Usage</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">Method</th>
+                    <th scope="col">Activity</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Yiorgos Avraamu</td>
+                    <td>United States</td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                        <div class="progress-bar" style="width: 25%"></div>
+                      </div>
+                    </td>
+                    <td>Cash / Card</td>
+                    <td>Last Login (10 Mins Ago)</td>
+                    <td>
+                      <div>
+                        <div class="dropdown">
+                          <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">File</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Yiorgos Avraamu</td>
+                    <td>United States</td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                        <div class="progress-bar" style="width: 25%"></div>
+                      </div>
+                      
+                    </td>
+                    <td>Cash / Card</td>
+                    <td>Last Login (10 Mins Ago)</td>
+                    <td>
+                      <div>
+                        <div class="dropdown">
+                          <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">File</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Yiorgos Avraamu</td>
+                    <td>United States</td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                        <div class="progress-bar" style="width: 25%"></div>
+                      </div>
+                    </td>
+                    <td>Cash / Card</td>
+                    <td>Last Login (10 Mins Ago)</td>
+                    <td>
+                      <div>
+                        <div class="dropdown">
+                          <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">File</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Yiorgos Avraamu</td>
+                    <td>United States</td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                        <div class="progress-bar" style="width: 25%"></div>
+                      </div>
+                    </td>
+                    <td>Cash / Card</td>
+                    <td>Last Login (10 Mins Ago)</td>
+                    <td>
+                      <div>
+                        <div class="dropdown">
+                          <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">File</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Yiorgos Avraamu</td>
+                    <td>United States</td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                        <div class="progress-bar" style="width: 25%"></div>
+                      </div>
+                    </td>
+                    <td>Cash / Card</td>
+                    <td>Last Login (10 Mins Ago)</td>
+                    <td>
+                      <div>
+                        <div class="dropdown">
+                          <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                          </a>
+                        
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">File</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootatrap js cdn -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
 
-    <!-- Link js -->
-    <script src="script.js"></script>
-  </body>
+  <!-- Footer start -->
+   <footer class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center">© 2025 - Alrights reserved by Arun kv
+          </p>
+        </div>
+      </div>
+    </div>
+   </footer>
+
+  <!-- Bootatrap js cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Chart js cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Barchart js cdn -->
+  <script src="mychart.js"></script>
+  <!-- <script src="Barchart.js"></script> -->
+
+  <!-- Link js -->
+  <script src="script.js"></script>
+ 
+</body>
+
 </html>
